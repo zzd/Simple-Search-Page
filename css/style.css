@@ -255,7 +255,7 @@ a {
     position: absolute;
     right: 10px;
     top: 5px;
-    z-index: 2000000;
+    z-index: 1;
     cursor: pointer;
     transition: 0.4s all ease-in-out;
 }
