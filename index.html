@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="Cache-Control" content="no-siteapp">
+      <link rel="icon" href="img/search.png" sizes="192x192" />
+      <link rel="apple-touch-icon-precomposed" href="img/search.png" />
+      <meta name="msapplication-TileImage" content="img/search.png" />
+      <link rel="shortcut icon" href="img/search.png" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-touch-fullscreen" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="full-screen" content="yes">
+      <!--UC强制全屏-->
+      <meta name="browsermode" content="application">
+      <!--UC应用模式-->
+      <meta name="x5-fullscreen" content="true">
+      <!--QQ强制全屏-->
+      <meta name="x5-page-mode" content="app">
+      <!--QQ应用模式-->
+      <title>简洁搜索 - 极简多引擎单页</title>
+      <link href="font/embed.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://at.alicdn.com/t/font_1592760_4yvemzrqgd6.css" />
+      <script src="https://at.alicdn.com/t/font_1592665_sy67mncm3d.js"></script>
+      <style type="text/css">
+            .icon {
+                  width: 1.5em;
+                  height: 1.5em;
+                  vertical-align: -0.35em;
+                  fill: currentColor;
+                  overflow: hidden;
+                  padding: 0 5px 0 7px;
+            }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+      <script src="js/sou.js"></script>
+      <link rel="shortcut icon" href="img/logo.ico" />
+      <link rel="stylesheet" href="css/search.css" />
+</head>
+
+<body>
+      <div id="menu"><i></i></div>
+      <div class="list closed">
+            <ul>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-sousuo1"></use>
+                        </svg> 常用/搜索</li>
+                  <li><a rel="nofollow" href="https://www.baidu.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-baidu"></use>
+                              </svg>百度</a></li>
+                  <li><a rel="nofollow" href="https://www.google.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-google"></use>
+                              </svg>谷歌</a></li>
+                  <li><a rel="nofollow" href="https://github.com" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gitHub"></use>
+                              </svg>GitHub</a></li>
+                  <li><a rel="nofollow" href="https://wx.qq.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weixin"></use>
+                              </svg>微信</a></li>
+                  <li><a rel="nofollow" href="https://weibo.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weibo"></use>
+                              </svg>微博</a></li>
+                  <li><a rel="nofollow" href="https://tieba.baidu.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-baidutieba"></use>
+                              </svg>贴吧</a></li>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-shipin1"></use>
+                        </svg> 视频/直播</li>
+                  <li><a rel="nofollow" href="https://www.youtube.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-youtube"></use>
+                              </svg>YouTube</a></li>
+                  <li><a rel="nofollow" href="https://www.bilibili.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-bilibili"></use>
+                              </svg>哔哩哔哩</a></li>
+                  <li><a rel="nofollow" href="https://www.youku.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-youku"></use>
+                              </svg>优酷</a></li>
+                  <li><a rel="nofollow" href="https://v.qq.com/" target="_blank">
+                              <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-tengxunshipin"></use>
+                              </svg>
+                              腾讯视频</a></li>
+                  <li><a rel="nofollow" href="https://www.iqiyi.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-aiqiyi"></use>
+                              </svg>爱奇艺</a></li>
+                  <li><a rel="nofollow" href="https://www.huya.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-huyazhibo"></use>
+                              </svg>虎牙直播</a></li>
+                  <li><a rel="nofollow" href="https://www.douyu.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-douyuTV"></use>
+                              </svg>斗鱼直播</a></li>
+                  <li><a rel="nofollow" href="https://egame.qq.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-fangqiedianjing"></use>
+                              </svg>企鹅电竞</a></li>
+                  <li><a rel="nofollow" href="http://www.zmz2019.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-zimu"></use>
+                              </svg>人人影视</a></li>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-bangong"></use>
+                        </svg> 办公/设计</li>
+                  <li><a rel="nofollow" href="https://www.kancloud.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-biji"></use>
+                              </svg>看云</a></li>
+                  <li><a rel="nofollow" href="https://www.yuque.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-yuquemianlogo"></use>
+                              </svg>语雀</a></li>
+                  <li><a rel="nofollow" href="https://www.latexstudio.net/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-tianjiagongshi"></use>
+                              </svg>LaTeX</a></li>
+                  <li><a rel="nofollow" href="https://cn.overleaf.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-xiezuo"></use>
+                              </svg>Overleaf</a></li>
+                  <li><a rel="nofollow" href="https://www.iconfont.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-alixingqiu"></use>
+                              </svg>阿里图标</a></li>
+                  <li><a rel="nofollow" href="https://huaban.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-huabanwang"></use>
+                              </svg>花瓣</a></li>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-caozuojiemiantubiao---_gongju"></use>
+                        </svg> 存储/工具</li>
+                  <li><a rel="nofollow" href="https://pan.baidu.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-baiduwangpan"></use>
+                              </svg>百度网盘</a></li>
+                  <li><a rel="nofollow" href="https://www.jianguoyun.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-jianguo"></use>
+                              </svg>坚果云</a></li>
+                  <li><a rel="nofollow" href="https://up.woozooo.com/u" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-yuncunchu"></use>
+                              </svg>蓝奏云</a></li>
+                  <li><a rel="nofollow" href="https://cowtransfer.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon--nainiu"></use>
+                              </svg>奶牛快传</a></li>
+                  <li><a rel="nofollow" href="https://send.firefox.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-huohuliulanqifirefox"></use>
+                              </svg>Ff Send</a></li>
+                  <li><a rel="nofollow" href="https://lolicon.dev/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-idrex"></use>
+                              </svg>Toolbox</a>
+                  </li>
+                  <li><a rel="nofollow" href="https://tools.miku.ac/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-gongju"></use>
+                              </svg>MikuTools</a></li>
+                  <li><a rel="nofollow" href="https://apkdl.in/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-apk"></use>
+                              </svg>APK下载</a></li>
+                  <li><a rel="nofollow" href="http://tool.chinaz.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-ico_yunyingguanli_yuangongxinxichaxun"></use>
+                              </svg>站长工具</a></li>
+                  <li><a rel="nofollow" href="https://tinify.cn/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon--xiongmao"></use>
+                              </svg>TinyPNG</a></li>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-_qianduankaifa"></use>
+                        </svg> 开发/云</li>
+                  <li><a rel="nofollow" href="https://www.aliyun.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-aliyun"></use>
+                              </svg>阿里云</a></li>
+                  <li><a rel="nofollow" href="https://cloud.tencent.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-tengxunyun"></use>
+                              </svg>腾讯云</a></li>
+                  <li><a rel="nofollow" href="https://www.qiniu.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-qiniuyun"></use>
+                              </svg>七牛云</a></li>
+                  <li><a rel="nofollow" href="https://www.cloudflare.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-cloudflare"></use>
+                              </svg>Cloudflare</a></li>
+                  <li><a rel="nofollow" href="https://www.w3school.com.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-wc"></use>
+                              </svg>W3school</a></li>
+                  <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-weiruan"></use>
+                              </svg>MSDN</a></li>
+                  <li><a rel="nofollow" href="https://rrkee.com/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-renren"></use>
+                              </svg>人人客</a></li>
+                  <li><a rel="nofollow" href="https://code.visualstudio.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-file_type_vscode"></use>
+                              </svg>VSCode</a></li>
+                  <li><a rel="nofollow" href="https://www.jetbrains.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-jetbrains"></use>
+                              </svg>JetBrains</a></li>
+                  <li class="title"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-_shequluntan"></use>
+                        </svg> 论坛/学习</li>
+                  <li><a rel="nofollow" href="https://juejin.im/" target="_blank"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-juejin"></use>
+                              </svg>掘金</a></li>
+                  <li><a rel="nofollow" href="https://segmentfault.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-iconsf-copy"></use>
+                              </svg>SF思否</a></li>
+                  <li><a rel="nofollow" href="https://www.52pojie.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-wuaipojie"></use>
+                              </svg>吾爱破解</a></li>
+                  <li><a rel="nofollow" href="https://www.itsk.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-SKY"></use>
+                              </svg>IT天空</a></li>
+                  <li><a rel="nofollow" href="https://www.ituring.com.cn/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-tulingyunlogo"></use>
+                              </svg>图灵社区</a></li>
+                  <li><a rel="nofollow" href="https://leetcode-cn.com/" target="_blank"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use xlink:href="#icon-LeetCode"></use>
+                              </svg>力扣</a>
+                  </li>
+            </ul>
+      </div>
+      <div id="tp-weather-widget" class="mywth"></div>
+      <script>
+            (function (a, h, g, f, e, d, c, b) {
+                  b = function () {
+                        d = h.createElement(g);
+                        c = h.getElementsByTagName(g)[0];
+                        d.src = e;
+                        d.charset = "utf-8";
+                        d.async = 1;
+                        c.parentNode.insertBefore(d, c)
+                  };
+                  a["SeniverseWeatherWidgetObject"] = f;
+                  a[f] || (a[f] = function () {
+                        (a[f].q = a[f].q || []).push(arguments)
+                  });
+                  a[f].l = +new Date();
+                  if (a.attachEvent) {
+                        a.attachEvent("onload", b)
+                  } else {
+                        a.addEventListener("load", b, false)
+                  }
+            }(window, document, "script", "SeniverseWeatherWidget",
+                  "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000)
+                        .toString(), 10)));
+            window.SeniverseWeatherWidget('show', {
+                  flavor: "slim",
+                  location: "WX4FBXXFKE4F",
+                  geolocation: true,
+                  language: "auto",
+                  unit: "c",
+                  theme: "light",
+                  token: "9001d4ec-2be3-43fc-9a16-abf98f1deaf9",
+                  hover: "enabled",
+                  container: "tp-weather-widget"
+            })
+      </script>
+      <div id="content">
+            <div class="con">
+                  <div class="shlogo">
+                        <div class="logo-text embed">简洁&nbsp;&nbsp;搜索</div>
+                  </div>
+                  <section class="sousuo">
+                        <div class="search">
+                              <div class="search-box">
+                                    <i class="iconfont icon-baidu" id="search-icon"></i>
+                                    <input type="text" id="txt" class="search-input" placeholder=" 输入关键字，按回车 / Enter 搜索"
+                                          autocomplete="off" />
+                                    <i class="iconfont icon-shanchu1" id="search-clear" style="display: none;"></i>
+                              </div>
+                              <!-- 搜索热词 -->
+                              <div class="box search-hot-text" id="box" style="display: none;">
+                                    <ul></ul>
+                              </div>
+                              <!-- 搜索引擎 -->
+                              <div class="search-engine" style="display: none;">
+                                    <div class="search-engine-head">
+                                          <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+                                          <div class="search-engine-tool">
+                                                搜索热词：<span id="hot-btn"></span>
+                                          </div>
+                                    </div>
+                                    <ul class="search-engine-list"></ul>
+                              </div>
+                        </div>
+                  </section>
+            </div>
+            <div class="foot">© 2018 - 2020 <a href="https://zdsr.cn/" target="_blank" class="embed" style="color: #6b6b6b;">简洁搜索</a>.
+                  All rights reserved. <a rel="nofollow" href="https://github.com/616620131/Simple-Search-Page" target="_blank"
+                        style="font-size: 12px;"><svg class="icon" aria-hidden="true">
+                              <use xlink:href="#icon-gitHub"></use>
+                        </svg></a>.<a href="https://github.com/5iux/sou" target="_blank" class="embed"
+                        style="color: #6b6b6b;">鸣谢5iux</a>.
+            </div>
+      </div>
+</body>
+<script src="./js/search.js"></script>
+
+</html>
+<!--
+作者:D.Young
+日期：2019-07-26
+最后修改：ZhangDi
+时间:2020-01-01
+版权所有，请勿删除
+-->

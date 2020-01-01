@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Noto-Sans-SC-Bold-2";
+    src: url("Noto-Sans-SC-Bold-2.eot"); /* IE9 */
+    src: url("Noto-Sans-SC-Bold-2.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("Noto-Sans-SC-Bold-2.woff") format("woff"), /* chrome、firefox */
+    url("Noto-Sans-SC-Bold-2.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("Noto-Sans-SC-Bold-2.svg#Noto-Sans-SC-Bold-2") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
