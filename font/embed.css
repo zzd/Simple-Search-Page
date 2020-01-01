@@ -1,0 +1,33 @@
+@font-face {
+    font-family: '杨任东竹石体-Bold';
+    font-display: swap;
+    src: url('https://at.alicdn.com/t/webfont_uzclu5cr4s.eot');
+    /* IE9*/
+    src: url('https://at.alicdn.com/t/webfont_uzclu5cr4s.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://at.alicdn.com/t/webfont_uzclu5cr4s.woff2') format('woff2'),
+        url('https://at.alicdn.com/t/webfont_uzclu5cr4s.woff') format('woff'),
+        /* chrome、firefox */
+        url('https://at.alicdn.com/t/webfont_uzclu5cr4s.ttf') format('truetype'),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('https://at.alicdn.com/t/webfont_uzclu5cr4s.svg#杨任东竹石体-Bold') format('svg');
+    /* iOS 4.1- */
+}
+
+
+
+@font-face {
+    font-family: '思源黑体-粗';
+    font-display: swap;
+    src: url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.eot');
+    /* IE9*/
+    src: url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.woff2') format('woff2'),
+        url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.woff') format('woff'),
+        /* chrome、firefox */
+        url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.ttf') format('truetype'),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('https://at.alicdn.com/t/webfont_hvpnja9zmzm.svg#思源黑体-粗') format('svg');
+    /* iOS 4.1- */
+}
