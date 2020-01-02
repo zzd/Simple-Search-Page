@@ -106,9 +106,10 @@ $("#txt").keyup(function (e) {
     if (e.keyCode == 38 || e.keyCode == 40 || storage.stopHot != 'true') {
       return
     }
+    $("#search-clear").css("display", "block");
     getHotkeyword($(this).val())
   } else {
-    $(".search-clear").css("display", "none");
+    $("#search-clear").css("display", "none");
     $("#box").css("display", "none")
   }
 });
@@ -140,16 +141,21 @@ $("#txt").keydown(function (e) {
     listIndex = -1
   }
 });
+$("#search-clear").click(function () {
+  $('#txt').val("");
+  $('#search-clear').css('display', 'none');
+  $("#box").css("display", "none");
+});
 $("#txt").focus(function () {
-  $(".search-box").css("box-shadow", "0px 0px 20px 0px #cccccc95");
+  $(".search-box").css("box-shadow", "0 4px 6px #0000001f");
   $(".search-box").css("border", "1px solid #cecece");
   if ($(this).val() && storage.stopHot == 'true') {
     getHotkeyword($(this).val())
   }
 });
 $("#txt").blur(function () {
-  $(".search-box").css("box-shadow", "0px 0px 10px 0px #cccccc95");
-  $(".search-box").css("border", "1px solid #e6e6e6");
+  $(".search-box").css("box-shadow", "0 2px 3px #0000000f");
+  $(".search-box").css("border", "1px solid #00000026");
   setTimeout(function () {
     $("#box").css("display", "none")
   }, 400)
@@ -187,6 +193,11 @@ $(function () {
       icon: 'icon-sougousousuo',
       color: '#fe620d',
       url: 'https://www.sogou.com/web?query='
+    }, {
+      name: '多吉',
+      icon: 'icon-dogen',
+      color: '#ffb744',
+      url: 'https://www.dogedoge.com/results?q='
     }, {
       name: '淘宝',
       icon: 'icon-taobao',

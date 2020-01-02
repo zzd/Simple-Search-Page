@@ -31,9 +31,10 @@
   /* Safari */
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0px 0px 8px 0px #cccccc95;
-  border-radius: 8px;
+  border: 1px solid #00000026;
+  box-shadow: 0 2px 3px #0000000f;
+  border-radius: 4px;
+  background-color: #fff
 }
 
 #search-icon {
@@ -88,7 +89,9 @@ input::-webkit-input-placeholder {
   position: absolute;
   z-index: 100;
   width: 100%;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #00000026;
+  border-top: none;
   background: #fff;
   box-shadow: 0px 4px 10px 0px #cccccc95;
 }
@@ -131,7 +134,12 @@ input::-webkit-input-placeholder {
   margin-top: -10px;
   color: #a9b1c7;
   cursor: pointer;
-  display: none;
+
+}
+
+#search-clear:hover {
+  font-weight: bold;
+  color: #5c5e63;
 }
 
 .search-engine {
@@ -322,7 +330,7 @@ input::-webkit-input-placeholder {
 
   .search-hot-text {
     width: 608px;
-    margin: 6px 20px 20px;
+    margin: 0px 20px 20px;
   }
 
   #search-clear {
@@ -341,7 +349,7 @@ input::-webkit-input-placeholder {
 }
 
 .search-hot-text ul li span {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: #00000000;
   list-style: none;
   cursor: pointer;
   box-sizing: border-box;

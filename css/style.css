@@ -25,7 +25,7 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: #fff;
+    background: #f7f7f7;
 }
 
 html {
@@ -104,7 +104,7 @@ a {
 }
 
 .con .shlogo .logo-text {
-    background: linear-gradient(45deg, #ff772e, #e7ab3c, #23D5AB, #23A6D5);
+    background: linear-gradient(45deg, #bbb7b7, #ffc760, #868d45, #67a1b6);
     background-size: 300% 300%;
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -329,7 +329,7 @@ a {
     position: absolute;
     right: 0px;
     z-index: 2000;
-    background: #f2f2f2;
+    background: #efefef;
     transition: 0.4s all ease-in-out;
 }
 
