@@ -6,8 +6,7 @@
 <p align="center">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/616620131/Simple-Search-Page">
   <a href="https://github.com/616620131/Simple-Search-Page/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/616620131/Simple-Search-Page"></a>
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/616620131/Simple-Search-Page?style=social">
-</p>
+  <a href="https://github.com/616620131/Simple-Search-Page/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/616620131/Simple-Search-Page?style=social"></a>
 
 # Simple-search-page
 
