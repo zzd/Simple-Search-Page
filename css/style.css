@@ -104,8 +104,8 @@ a {
 }
 
 .con .shlogo .logo-text {
-    background: linear-gradient(45deg, #bbb7b7, #ffc760, #868d45, #67a1b6);
-    background-size: 300% 300%;
+    background: linear-gradient(45deg, #ee7c3d, #eea93d, #de3959, #9b6614);
+    background-size: 200% 200%;
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
