@@ -37,6 +37,7 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 
 # 版权说明
 
+请勿删除foot下的版权信息，否则下一个版本闭源
 该项目签署了MIT 授权许可，详情请参阅 LICENSE
 
 # 鸣谢
