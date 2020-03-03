@@ -35,8 +35,10 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 - 全站Retina高清体验
 
 # 版本更新
-  page 1.1 优化页面性能，添加部分导航链接
-  page 1.0 初次推送
+
+  page 1.1. 优化页面性能，添加部分导航链接
+
+  page 1.0. 初次推送
 
 # 版权说明
 
