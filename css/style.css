@@ -25,7 +25,7 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: #f7f7f7;
+    background: #ffffff;
 }
 
 html {
@@ -68,7 +68,7 @@ a {
 
 .con {
     width: 100%;
-    transition: 1s all;
+    /* transition: 1s all; */
     margin: auto;
     min-width: 320px;
     height: 380px;
@@ -257,7 +257,12 @@ a {
     top: 5px;
     z-index: 1;
     cursor: pointer;
-    transition: 0.4s all ease-in-out;
+    transition: 0.3s all ease;
+    webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 #menu i {
@@ -294,7 +299,7 @@ a {
     right: 380px;
     background: #29f;
     border-radius: 25px;
-    box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
+    box-shadow: 0 6px 8px #249ffd4d;
 }
 
 #menu.on i {
@@ -330,7 +335,16 @@ a {
     right: 0px;
     z-index: 2000;
     background: #efefef;
-    transition: 0.4s all ease-in-out;
+    transition: 0.3s all ease;
+    webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.list::-webkit-scrollbar {
+    display: none;
 }
 
 .list.closed {
@@ -356,7 +370,7 @@ a {
 .list ul li a {
     width: 100%;
     border-radius: 13px;
-    transition: 0.2s all linear;
+    /* transition: 0.2s all linear; */
     height: 100%;
     display: block;
     color: rgb(36, 36, 36);
@@ -369,7 +383,7 @@ a {
 .list ul li a i {
     margin-right: 5px;
     margin-left: 15px;
-    transition: 0.2s all linear;
+    /* transition: 0.2s all linear; */
     filter: alpha(Opacity=60);
     opacity: 0.8;
 }
