@@ -19,13 +19,14 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 # 展示
 ### 电脑端示例
 
-![lt9T2j.png](https://s2.ax1x.com/2020/01/02/lt9T2j.png)
-![lt97xs.png](https://s2.ax1x.com/2020/01/02/lt97xs.png)
-![lt9oGQ.png](https://s2.ax1x.com/2020/01/02/lt9oGQ.png)
+![8S3xDx.png](https://s2.ax1x.com/2020/03/09/8S3xDx.png)
+![8S8pVK.png](https://s2.ax1x.com/2020/03/09/8S8pVK.png)
+![8S3zb6.png](https://s2.ax1x.com/2020/03/09/8S3zb6.png)
 
-### 手机端示例
+### 平板端示例
 
-![ltCAZ6.jpg](https://s2.ax1x.com/2020/01/02/ltCAZ6.jpg)
+![8S35D0.jpg](https://s2.ax1x.com/2020/03/09/8S35D0.jpg)
+![8S37UU.jpg](https://s2.ax1x.com/2020/03/09/8S37UU.jpg)
 
 # 特性
 - 简洁的页面布局与配色
@@ -42,7 +43,7 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 
 # 版权说明
 
-请勿删除foot下的版权信息，否则下一个版本闭源
+请勿删除foot下的版权信息，否则将闭源
 该项目签署了MIT 授权许可，详情请参阅 LICENSE
 
 # 鸣谢
