@@ -19,15 +19,13 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 # 展示
 ### 电脑端示例
 
-![lt9T2j.png](https://s2.ax1x.com/2020/01/02/lt9T2j.png)
-![lt97xs.png](https://s2.ax1x.com/2020/01/02/lt97xs.png)
-![lt9oGQ.png](https://s2.ax1x.com/2020/01/02/lt9oGQ.png)
+![8FmMMn.png](https://s2.ax1x.com/2020/03/10/8FmMMn.png)
+![8FmQrq.png](https://s2.ax1x.com/2020/03/10/8FmQrq.png)
+![8Fmlq0.png](https://s2.ax1x.com/2020/03/10/8Fmlq0.png)
 
-### 手机端示例
-
-![ltCAZ6.jpg](https://s2.ax1x.com/2020/01/02/ltCAZ6.jpg)
 
 # 特性
+
 - 简洁的页面布局与配色
 - 聚合多种搜索引擎的搜索框
 - 搜索框热度词汇提示
@@ -36,13 +34,16 @@ demo:[hao.zdsr.cn](https://hao.zdsr.cn)
 
 # 版本更新
 
+  page 1.3. 修复css细节，改进字体，静态文件新增min版本
+
   page 1.1. 优化页面性能，添加部分导航链接
 
   page 1.0. 初次推送
 
 # 版权说明
 
-请勿删除foot下的版权信息，否则下一个版本闭源
+请勿删除foot下的版权信息，否则将闭源
+
 该项目签署了MIT 授权许可，详情请参阅 LICENSE
 
 # 鸣谢
