@@ -55,10 +55,15 @@
 
 .search-input {
   box-sizing: border-box;
-  font-family: 'Noto-Sans-SC-Bold-2', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
+  font-family: 'SF-Pro-Display-Semibold',
+    'PingFangSC-Light',
+    'Microsoft YaHei UI',
+    'Microsoft YaHei',
+    helvetica,
+    sans-serif;
   flex: 1;
   height: 50px;
-  font-size: 18px;
+  font-size: 20px;
   color: #000000de;
   border: none;
   outline: none;
@@ -68,8 +73,13 @@
 }
 
 input::-webkit-input-placeholder {
-  font-size: 14px;
-  font-family: 'Noto-Sans-SC-Bold-2', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
+  font-size: 16px;
+  font-family: 'SF-Pro-Display-Semibold',
+    'PingFangSC-Light',
+    'Microsoft YaHei UI',
+    'Microsoft YaHei',
+    helvetica,
+    sans-serif;
   letter-spacing: 1px;
   color: #ccc;
 }
@@ -106,7 +116,7 @@ input::-webkit-input-placeholder {
   line-height: 30px;
   font-size: 15px;
   padding: 0px 25px;
-  color: #4d4d4d;
+  color: #535353;
   cursor: pointer;
   list-style: none;
 }
@@ -149,8 +159,8 @@ input::-webkit-input-placeholder {
   width: 100%;
   background: #FFF;
   padding: 15px 0 0 15px;
-  border-radius: 5px;
-  box-shadow: 0px 5px 20px 0px #d8d7d7;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px 0px #cccccc95;
   /* transition: all 0.3s; */
   display: none;
   z-index: 999
@@ -166,13 +176,13 @@ input::-webkit-input-placeholder {
   float: left;
   margin: 0;
   font-size: 14px;
-  color: #999;
+  color: #636363;
 }
 
 .search-engine-tool {
   float: right;
   font-size: 14px;
-  color: #999;
+  color: #636363;
 }
 
 .search-engine-tool>span {
@@ -222,7 +232,7 @@ input::-webkit-input-placeholder {
   padding: 5px 10px 5px 10px;
   margin: 0 10px 10px 0;
   background: #f9f9f9;
-  color: #999;
+  color: #636363;
   cursor: pointer;
   list-style: none;
 }
@@ -362,5 +372,5 @@ input::-webkit-input-placeholder {
   background: #e5e5e5;
   margin-right: 10px;
   border-radius: 10px;
-  color: #999;
+  color: #535353;
 }

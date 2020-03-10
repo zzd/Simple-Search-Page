@@ -29,7 +29,12 @@ body {
 }
 
 html {
-    font-family: 'Noto-Sans-SC-Bold-2', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
+    font-family: 'SF-Pro-Display-Semibold',
+        'PingFangSC-Light',
+        'Microsoft YaHei UI',
+        'Microsoft YaHei',
+        helvetica,
+        sans-serif;
     font-weight: normal;
     color: #000;
 }
@@ -47,7 +52,7 @@ button {
 input::-webkit-input-placeholder {
     color: #ccc;
     letter-spacing: 2px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 ul,
@@ -104,7 +109,7 @@ a {
 }
 
 .con .shlogo .logo-text {
-    background: linear-gradient(45deg, #ee7c3d, #eea93d, #de3959, #9b6614);
+    background: linear-gradient(45deg, #f3671b, #f09708, #de3959, #9b6614);
     background-size: 200% 200%;
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -118,7 +123,14 @@ a {
 }
 
 .embed {
-    font-family: FZCuJinLFW, 'Noto-Sans-SC-Bold-2', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
+    font-family: 'SF-Pro-Display-Semibold',
+        'FZCuJinLJW',
+        'PingFangSC-Light',
+        'Microsoft YaHei UI',
+        'Microsoft YaHei',
+        helvetica,
+        sans-serif;
+    color: #535353;
 }
 
 .con .shlogo a {
@@ -224,7 +236,7 @@ a {
     z-index: 1000;
     text-align: center;
     width: 100%;
-    color: #6b6b6b;
+    color: #535353;
     height: 20px;
     line-height: 20px;
     font-size: 14px;
@@ -373,7 +385,7 @@ a {
     /* transition: 0.2s all linear; */
     height: 100%;
     display: block;
-    color: rgb(36, 36, 36);
+    color: #242424;
     font-weight: 500;
     background: #ffffff;
     text-align: left;
@@ -412,7 +424,7 @@ a {
     text-align: left;
     text-indent: 10px;
     /*border-bottom: 1px dashed #dedede;*/
-    color: rgb(36, 36, 36);
+    color: #242424;
     font-size: 18px;
     font-weight: bold;
 }
