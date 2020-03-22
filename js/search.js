@@ -152,7 +152,9 @@ $("#txt").focus(function () {
   }
 });
 $("#txt").blur(function () {
-  $("#box").css("display", "none")
+  setTimeout(function () {
+    $("#box").css("display", "none")
+  }, 100)
 });
 $(function () {
   //$('#box ul').html() === '' ? $('#box').css('height','0px') : $('#box').css('height','auto');
