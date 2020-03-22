@@ -14,7 +14,7 @@
 一个极简的搜索页面，同时兼顾了网址导航功能。
 本项目由[https://github.com/5iux/sou](https://github.com/5iux/sou)二次开发，重新调整了页面布局与配色，加入了聚合搜索框，并且包含搜索提示功能，采用阿里图标库全新symbol引用方式，直接支持多色图标，不再受单色限制。
 
-demo：[www.cosysoso.com](https://www.cosysoso.com/)，[hao.zdsr.cn](https://hao.zdsr.cn)
+demo：国外[www.cosysoso.com](https://www.cosysoso.com/)，国内[hao.zdsr.cn](https://hao.zdsr.cn)
 
 
 # 展示
