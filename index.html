@@ -1,8 +1,7 @@
 <!-- 
-原作者:D.Young 日期：2019-07-26
 最后修改：ZhangDi
 https://github.com/616620131/Simple-Search-Page 
-时间:2020-03-10 版权所有，请勿删除 
+时间:2020-03-22 版权所有，请勿删除 
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -32,7 +31,7 @@ https://github.com/616620131/Simple-Search-Page
       <meta name="x5-page-mode" content="app">
       <!--QQ应用模式-->
       <link href="font/embed.css" rel="stylesheet">
-      <link href="css/style.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
       <link rel="stylesheet" href="https://at.alicdn.com/t/font_1592760_91d2wmcwj0m.css" />
       <script src="https://at.alicdn.com/t/font_1592665_8irfenx66gf.js"></script>
       <style type="text/css">
@@ -48,7 +47,7 @@ https://github.com/616620131/Simple-Search-Page
       <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
       <script src="js/sou.min.js"></script>
       <link rel="shortcut icon" href="img/logo.ico" />
-      <link rel="stylesheet" href="css/search.min.css" />
+      <link rel="stylesheet" href="css/search.css" />
       <!-- 百度统计 -->
       <script>
             var _hmt = _hmt || [];
@@ -283,42 +282,6 @@ https://github.com/616620131/Simple-Search-Page
                   </li>
             </ul>
       </div>
-      <!-- <div id="tp-weather-widget" class="mywth"></div>
-      <script>
-            (function (a, h, g, f, e, d, c, b) {
-                  b = function () {
-                        d = h.createElement(g);
-                        c = h.getElementsByTagName(g)[0];
-                        d.src = e;
-                        d.charset = "utf-8";
-                        d.async = 1;
-                        c.parentNode.insertBefore(d, c)
-                  };
-                  a["SeniverseWeatherWidgetObject"] = f;
-                  a[f] || (a[f] = function () {
-                        (a[f].q = a[f].q || []).push(arguments)
-                  });
-                  a[f].l = +new Date();
-                  if (a.attachEvent) {
-                        a.attachEvent("onload", b)
-                  } else {
-                        a.addEventListener("load", b, false)
-                  }
-            }(window, document, "script", "SeniverseWeatherWidget",
-                  "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000)
-                        .toString(), 10)));
-            window.SeniverseWeatherWidget('show', {
-                  flavor: "slim",
-                  location: "WX4FBXXFKE4F",
-                  geolocation: true,
-                  language: "auto",
-                  unit: "c",
-                  theme: "light",
-                  token: "9001d4ec-2be3-43fc-9a16-abf98f1deaf9",
-                  hover: "enabled",
-                  container: "tp-weather-widget"
-            })
-      </script> -->
       <div id="content">
             <div class="con">
                   <div class="shlogo">
@@ -328,8 +291,8 @@ https://github.com/616620131/Simple-Search-Page
                         <div class="search">
                               <div class="search-box">
                                     <i class="iconfont icon-baidu" id="search-icon" style="color: #3385ff"></i>
-                                    <input type="text" id="txt" class="search-input" placeholder=" 输入关键字，按回车 / Enter 搜索"
-                                          autocomplete="off" />
+                                    <input type="text" id="txt" class="search-input" autocomplete="off"
+                                          autofocus="autofocus" />
                                     <i class="iconfont icon-shanchu" id="search-clear" style="display: none;"></i>
                               </div>
                               <!-- 搜索热词 -->
@@ -351,19 +314,18 @@ https://github.com/616620131/Simple-Search-Page
             </div>
             <div class="foot">© 2018 - 2020 <a href="https://zdsr.cn/" target="_blank" class="embed"><img src="
                         img/search.png" style="height: 13px;">简洁搜索</a>.
-                  All rights reserved. <a rel="nofollow" href="https://github.com/616620131/Simple-Search-Page"
-                        target="_blank" style="font-size: 12px;"><svg class="icon" aria-hidden="true">
+                  All rights reserved. <a href="https://github.com/616620131/Simple-Search-Page/releases/tag/1.3.1"
+                        target="_blank" class="embed" style="font-size: 12px;"><svg class="icon" aria-hidden="true">
                               <use xlink:href="#icon-gitHub"></use>
-                        </svg></a>.<a href="https://github.com/5iux/sou" target="_blank" class="embed">鸣谢5iux</a>.
+                        </svg>v1.3.1</a>
             </div>
       </div>
 </body>
-<script src=" ./js/search.min.js"> </script>
+<script src=" ./js/search.js"> </script>
 
 </html>
 <!-- 
-原作者:D.Young 日期：2019-07-26
 最后修改：ZhangDi
 https://github.com/616620131/Simple-Search-Page 
-时间:2020-03-10 版权所有，请勿删除 
+时间:2020-03-22 版权所有，请勿删除 
 -->

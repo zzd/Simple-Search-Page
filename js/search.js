@@ -147,18 +147,12 @@ $("#search-clear").click(function () {
   $("#box").css("display", "none");
 });
 $("#txt").focus(function () {
-  $(".search-box").css("box-shadow", "0 4px 6px #0000001f");
-  $(".search-box").css("border", "1px solid #cecece");
   if ($(this).val() && storage.stopHot == 'true') {
     getHotkeyword($(this).val())
   }
 });
 $("#txt").blur(function () {
-  $(".search-box").css("box-shadow", "0 2px 3px #0000000f");
-  $(".search-box").css("border", "1px solid #00000026");
-  setTimeout(function () {
-    $("#box").css("display", "none")
-  }, 400)
+  $("#box").css("display", "none")
 });
 $(function () {
   //$('#box ul').html() === '' ? $('#box').css('height','0px') : $('#box').css('height','auto');
@@ -184,7 +178,7 @@ $(function () {
       color: '#24292e',
       url: 'https://github.com/search?utf8=✓&q='
     }, {
-      name: '360搜索',
+      name: '360',
       icon: 'icon-sousuo1',
       color: '#f8b616',
       url: 'https://www.so.com/s?q='

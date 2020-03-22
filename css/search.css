@@ -32,16 +32,24 @@
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #00000026;
-  box-shadow: 0 2px 3px #0000000f;
-  border-radius: 12px;
+  /*box-shadow: 0 2px 3px #0000000f;*/
+  border-radius: 24px;
   background-color: #fff
+}
+
+.search-box:focus-within {
+  box-shadow: 0 1px 6px 0 #20212447 !important
+}
+
+.search-box:hover {
+  box-shadow: 0 1px 6px 0 #20212447
 }
 
 #search-icon {
   display: block;
   position: absolute;
   left: 3px;
-  top: 5px;
+  top: 6px;
   width: 41px;
   height: 41px;
   overflow: hidden;
@@ -56,7 +64,7 @@
 .search-input {
   box-sizing: border-box;
   font-family: 'SF-Pro-Display-Semibold',
-    'PingFangSC-Light',
+    'PingFangSC-Regular',
     'Microsoft YaHei UI',
     'Microsoft YaHei',
     helvetica,
@@ -75,7 +83,7 @@
 input::-webkit-input-placeholder {
   font-size: 16px;
   font-family: 'SF-Pro-Display-Semibold',
-    'PingFangSC-Light',
+    'PingFangSC-Regular',
     'Microsoft YaHei UI',
     'Microsoft YaHei',
     helvetica,
@@ -96,14 +104,15 @@ input::-webkit-input-placeholder {
 }
 
 .search-hot-text {
-  position: absolute;
+  position: relative;
+  margin: 0 auto;
   z-index: 100;
-  width: 100%;
+  width: 90%;
   border-radius: 0 0 12px 12px;
   border: 1px solid #00000026;
   border-top: none;
   background: #fff;
-  box-shadow: 0px 4px 10px 0px #cccccc95;
+  box-shadow: 0 1px 6px 0 #20212447;
 }
 
 .search-hot-text ul {
@@ -134,9 +143,8 @@ input::-webkit-input-placeholder {
 
 #search-clear {
   position: absolute;
-  right: 15px;
-  top: 50%;
-  left: 90%;
+  top: 26px;
+  right: 11px;
   width: 20px;
   height: 20px;
   line-height: 20px;
@@ -144,7 +152,6 @@ input::-webkit-input-placeholder {
   margin-top: -10px;
   color: #a9b1c7;
   cursor: pointer;
-
 }
 
 #search-clear:hover {
@@ -159,11 +166,11 @@ input::-webkit-input-placeholder {
   width: 100%;
   background: #FFF;
   padding: 15px 0 0 15px;
-  border-radius: 12px;
-  box-shadow: 0px 5px 12px 0px #cccccc95;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px 0 #20212447;
   /* transition: all 0.3s; */
   display: none;
-  z-index: 999
+  z-index: 999;
 }
 
 .search-engine-head {
@@ -191,7 +198,7 @@ input::-webkit-input-placeholder {
   height: 15px;
   font-size: 18px;
   line-height: 15px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .search-engine-tool>span.icon-kaiguanguan-kai {
@@ -229,12 +236,19 @@ input::-webkit-input-placeholder {
   width: 30%;
   line-height: 30px;
   font-size: 14px;
-  padding: 5px 10px 5px 10px;
+  padding: 4px 9px 4px 9px;
   margin: 0 10px 10px 0;
   background: #f9f9f9;
   color: #636363;
   cursor: pointer;
   list-style: none;
+  border-radius: 12px;
+  border: 1px solid #ffffff;
+}
+
+.search-engine-list li:hover {
+  background: #f9f9f9;
+  border: 1px solid #5f5f5f;
 }
 
 .search-engine-list li i {
