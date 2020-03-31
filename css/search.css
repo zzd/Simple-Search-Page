@@ -48,14 +48,13 @@
 #search-icon {
   display: block;
   position: absolute;
-  left: 3px;
-  top: 6px;
-  width: 41px;
-  height: 41px;
+  left: 0px;
+  top: 7.5px;
+  width: 35px;
+  height: 35px;
   overflow: hidden;
-  border-radius: 25px;
   text-align: center;
-  line-height: 41px;
+  line-height: 35px;
   font-size: 30px;
   color: #2196f3;
   cursor: pointer
@@ -261,6 +260,68 @@ input::-webkit-input-placeholder {
   text-align: center;
   margin-right: 5px;
   margin-top: 2.5px;
+}
+
+.search-engine-list .icon {
+  padding: 0 5px 0 0px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 13px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked+.slider {
+  background-color: #32CD32;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #32CD32;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 32px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 @media (min-width: 992px) {

@@ -20,9 +20,9 @@ demo：国外[www.cosysoso.com](https://www.cosysoso.com/)，国内[hao.zdsr.cn]
 # 展示
 ### 电脑端示例
 
-![20200322133846.png](https://i.loli.net/2020/03/22/eYNRHsbIKTi8g1D.png)
-![20200322133909.png](https://i.loli.net/2020/03/22/cR8xiZClHwkIdPO.png)
-![20200322133923.png](https://i.loli.net/2020/03/22/QLMkAdfnlJCqW2T.png)
+![批注 2020-04-01 011808.png](https://i.loli.net/2020/04/01/nHr5xh7uOqXJA8m.png)
+![批注 2020-04-01 011855.png](https://i.loli.net/2020/04/01/1FiZ4HJmDQRt7zN.png)
+![批注 2020-04-01 011856.png](https://i.loli.net/2020/04/01/WITpKXGQgMureEB.png)
 
 
 # 特性
@@ -35,6 +35,8 @@ demo：国外[www.cosysoso.com](https://www.cosysoso.com/)，国内[hao.zdsr.cn]
 
 # 版本更新
 
+  page 1.4. 重写部分js，采用读取json的方式加载链接；改进搜索引擎图标
+
   page 1.3.1. 调整搜索框样式(参照Google)，优化部分细节
 
   page 1.3. 修复css细节，改进字体，静态文件新增min版本
@@ -46,6 +48,8 @@ demo：国外[www.cosysoso.com](https://www.cosysoso.com/)，国内[hao.zdsr.cn]
 # 版权说明
 
 请勿删除foot下的版权信息，否则将闭源
+
+从 page 1.4. 开始，将对部分代码进行混淆加密，请不要尝试删除版权信息
 
 该项目签署了MIT 授权许可，详情请参阅 LICENSE
 
