@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13264271",
+      "name": "阿里云",
+      "font_class": "aliyun",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "13303504",
+      "name": "gitlab",
+      "font_class": "gitlab",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
       "icon_id": "9185379",
       "name": "outlook_48x1",
       "font_class": "outlook_x",
@@ -158,13 +172,6 @@
       "font_class": "apk",
       "unicode": "e67f",
       "unicode_decimal": 59007
-    },
-    {
-      "icon_id": "7895647",
-      "name": "阿里云",
-      "font_class": "aliyun",
-      "unicode": "e644",
-      "unicode_decimal": 58948
     },
     {
       "icon_id": "8470690",

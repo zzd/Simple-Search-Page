@@ -6,10 +6,13 @@
 <p align="center">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/616620131/Simple-Search-Page">
   <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/616620131/Simple-Search-Page/total">
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/616620131/Simple-Search-Page/latest/total">
   <a href="https://github.com/616620131/Simple-Search-Page/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/616620131/Simple-Search-Page"></a>
   <a href="https://github.com/616620131/Simple-Search-Page/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/616620131/Simple-Search-Page?style=social"></a>
 
 # Simple-search-page
+
+[中文](README.md) / [English](README-EN.md)
 
 一个极简的搜索页面，同时兼顾了网址导航功能。
 本项目由[https://github.com/5iux/sou](https://github.com/5iux/sou) 二次开发，重新调整了页面布局与配色，加入了聚合搜索框，并且包含搜索提示功能，采用阿里图标库全新symbol引用方式，直接支持多色图标，不再受单色限制。后期计划加入更多自定义功能，并且加入云同步。
@@ -25,9 +28,9 @@ demo：
 # 展示
 ### 电脑端示例
 
-![批注 2020-04-01 011808.png](https://i.loli.net/2020/04/01/nHr5xh7uOqXJA8m.png)
-![批注 2020-04-01 011855.png](https://i.loli.net/2020/04/01/1FiZ4HJmDQRt7zN.png)
-![批注 2020-04-01 011856.png](https://i.loli.net/2020/04/01/WITpKXGQgMureEB.png)
+![](https://ae01.alicdn.com/kf/H47053bab28a84e09bc5293a6d9548759D.jpg)
+![](https://ae01.alicdn.com/kf/H46d7e01306d14f0aa3d8be17272fc168j.jpg)
+![](https://ae01.alicdn.com/kf/Hbf82cefdf96a4e348cff3da506696a54N.jpg)
 
 
 # 特性
@@ -44,6 +47,8 @@ demo：
 
 
 # 版本更新
+
+  page 1.4.2. 样式微调，修复bug，新增搜索按钮
 
   page 1.4. 重写部分js，采用读取json的方式加载链接；改进搜索引擎图标
 

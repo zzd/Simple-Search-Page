@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7404517",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e785",
+      "unicode_decimal": 59269
+    },
+    {
+      "icon_id": "8721206",
+      "name": "搜索",
+      "font_class": "enter",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "7817983",
       "name": "搜索",
       "font_class": "sousuo",
@@ -46,13 +60,6 @@
       "font_class": "biying1",
       "unicode": "e603",
       "unicode_decimal": 58883
-    },
-    {
-      "icon_id": "6970021",
-      "name": "删除",
-      "font_class": "shanchu",
-      "unicode": "e6fe",
-      "unicode_decimal": 59134
     },
     {
       "icon_id": "140067",

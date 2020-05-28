@@ -61,7 +61,12 @@ function getHotkeyword(value) {
 			if (hotList) {
 				$("#box").css("display", "block");
 				for (var i = 0; i < hotList; i++) {
-					$("#box ul").append("<li><span>" + (i + 1) + "</span>" + res.s[i] + "</li>");
+					if (i===hotList-1){
+						$("#box ul").append('<li id="lastHot"><span>' + (i + 1) + "</span>" + res.s[i] + "</li>");
+					}
+					else{
+						$("#box ul").append("<li><span>" + (i + 1) + "</span>" + res.s[i] + "</li>");
+					}
 					$("#box ul li").eq(i).click(function() {
 						$('#txt').val(this.childNodes[1].nodeValue);
 						window.open(thisSearch + this.childNodes[1].nodeValue);
@@ -75,20 +80,16 @@ function getHotkeyword(value) {
 							"color": "#fff",
 							"background": "#f54545"
 						})
-					} else {
-						if (i === 1) {
-							$("#box ul span").eq(i).css({
-								"color": "#fff",
-								"background": "#ff8547"
-							})
-						} else {
-							if (i === 2) {
-								$("#box ul span").eq(i).css({
-									"color": "#fff",
-									"background": "#ffac38"
-								})
-							}
-						}
+					} else if (i === 1) {
+						$("#box ul span").eq(i).css({
+							"color": "#fff",
+							"background": "#ff8547"
+						})
+					} else if (i === 2) {
+						$("#box ul span").eq(i).css({
+							"color": "#fff",
+							"background": "#ffac38"
+						})
 					}
 				}
 			} else {
@@ -146,6 +147,10 @@ $("#search-clear").click(function() {
 	$('#txt').val("");
 	$('#search-clear').css('display', 'none');
 	$("#box").css("display", "none");
+	console.log("清除输入框");
+});
+$("#search-enter").click(function() {
+	window.open(thisSearch + $('#txt').val());
 });
 $("#txt").focus(function() {
 	if ($(this).val() && storage.stopHot == 'true') {
@@ -247,6 +252,7 @@ $(function() {
 		var _index = $(this).index();
 		var thisIcon = $(this).children().children().attr('xlink:href');
 		var thisText = $(this).text() + '搜索';
+		console.log(thisText);
 		$('#txt').attr('placeholder', thisText)
 		$('#search-icon use').attr('xlink:href', thisIcon)
 		thisSearch = search.data[_index].url;
