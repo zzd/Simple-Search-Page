@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://hao.zdsr.cn/" target="_blank">
-    <img width="180" src="./img/search.png" alt="logo">
+    <img width="180" src="https://s1.ax1x.com/2020/06/13/tvwVuF.png" alt="logo">
   </a>
 </p>
 <p align="center">
@@ -9,65 +9,32 @@
   <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/616620131/Simple-Search-Page/latest/total">
   <a href="https://github.com/616620131/Simple-Search-Page/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/616620131/Simple-Search-Page"></a>
   <a href="https://github.com/616620131/Simple-Search-Page/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/616620131/Simple-Search-Page?style=social"></a>
+</p>
 
-# Simple-search-page
+# bye
+由于大量使用者不尊重版权，自私的去除所有版权信息（github开源地址都不留下痕迹，甚至某些资源站拿源码收费下载），本项目开源版现停止维护。
 
-[中文](README.md) / [English](README-EN.md)
+releases仍提供1.4.2及以下版本下载，有需要请自己修改。
 
-一个极简的搜索页面，同时兼顾了网址导航功能。
-本项目由[https://github.com/5iux/sou](https://github.com/5iux/sou) 二次开发，重新调整了页面布局与配色，加入了聚合搜索框，并且包含搜索提示功能，采用阿里图标库全新symbol引用方式，直接支持多色图标，不再受单色限制。后期计划加入更多自定义功能，并且加入云同步。
+感谢每个stargazer的支持。
 
-你无需部署源码，本项目旨在为[hao.zdsr.cn](https://hao.zdsr.cn)开发，将此页面设为浏览器主页即可。
+最新发布请关注hao.zdsr.cn，无需部署，你依然可以直接使用本站。
 
-demo：
-国内[hao.zdsr.cn](https://hao.zdsr.cn)(项目主页，特性通常优于开源版)；
-国外[www.cosysoso.com](https://www.cosysoso.com/)(GitHub同步镜像站)。
+![SIMPLE SO](https://s1.ax1x.com/2020/06/13/tvdfXD.png)
 
-加入讨论：如果您有更好的建议，或者对项目感兴趣，欢迎加入QQ群(1065753778)。
-
-# 展示
-### 电脑端示例
-
-![](https://ae01.alicdn.com/kf/H47053bab28a84e09bc5293a6d9548759D.jpg)
-![](https://ae01.alicdn.com/kf/H46d7e01306d14f0aa3d8be17272fc168j.jpg)
-![](https://ae01.alicdn.com/kf/Hbf82cefdf96a4e348cff3da506696a54N.jpg)
-
-
-# 特性
-
-- [x] 简洁的页面布局与配色
-- [x] 聚合多种搜索引擎的搜索框
-- [x] 搜索框热度词汇提示
-- [x] 侧栏收集常用网址导航
-- [x] 全站Retina高清体验
-- [ ] 前端自定义导航及搜索引擎入口
-- [ ] 加入后台，同步用户自定义信息
-- [ ] 自定义背景图
-- [ ] 自动获取网站icon
-
-
-# 版本更新
-
-  page 1.4.2. 样式微调，修复bug，新增搜索按钮
-
-  page 1.4. 重写部分js，采用读取json的方式加载链接；改进搜索引擎图标
-
-  page 1.3.1. 调整搜索框样式(参照Google)，优化部分细节
-
-  page 1.3. 修复css细节，改进字体，静态文件新增min版本
-
-  page 1.1. 优化页面性能，添加部分导航链接
-
-  page 1.0. 初次推送
-
-# 版权说明
-
-请勿删除foot下的版权信息，否则闭源
-
-从 page 1.4. 开始，将对部分代码进行混淆加密，请不要尝试删除版权信息
-
-该项目签署了Apache License 2.0授权许可，详情请参阅 LICENSE
-
-# 鸣谢
-
-- [5iux/sou](https://github.com/5iux/sou)  [![GitHub stars](https://img.shields.io/github/stars/5iux/sou?style=social)](https://github.com/5iux/sou/stargazers)
+# 开源环境阻碍者
+以下列举部分去除版权且收费的资源网搬运工，切勿上当。
+ - https://www.xjn360.com/10535.html [创业新技能资源网站]
+ - https://download.csdn.net/detail/qq_37428797/12384341 [CSDN某用户]
+ - http://www.xiaoerhu.com/code/detail510.html [小二胡资源网站]
+ - http://www.91ce.com/3010.html [91亲测资源网站]
+ - https://www.huzhan.com/code/goods384845.html [互站网某用户]
+ - http://www.asp300.net/SoftView/27/SoftView_69213.html [asp300源码]
+ - http://hao.ceoll.com/xq/1211.html [源码导航]
+ - https://www.xmooo.com/1485.html [熊猫圈]
+ - https://www.zbhf.net/cms/others/19139.html [装吧资源]
+ - http://www.wayhzyw.com/30833.html [我爱优化资源网]
+ - https://riyuanma.com/20577.html [Ri VIP]
+ - https://www.kry168.com/10496.html [闲人源码网]
+ - https://86sucai.cgtblog.com/23884.html [86素材网]
+ - ...
