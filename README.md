@@ -11,6 +11,10 @@
   <a href="https://github.com/616620131/Simple-Search-Page/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/616620131/Simple-Search-Page?style=social"></a>
 </p>
 
+# v3.0更新说明
+版本长时间未更新，bug未得到及时修复。为了提高开发效率，本项目即将使用vue重构。现长期征集新的需求，可在issue提交。
+
+----
 # bye
 由于大量使用者不尊重版权，自私的去除所有版权信息（github开源地址都不留下痕迹，甚至某些资源站拿源码收费下载），本项目开源版现停止维护。
 
@@ -18,7 +22,7 @@ releases仍提供1.4.2及以下版本下载，有需要请自己修改。
 
 感谢每个stargazer的支持。
 
-最新发布请关注hao.zdsr.cn，无需部署，你依然可以直接使用本站。
+最新发布请关注https://hao.zdsr.cn ，无需部署，你依然可以直接使用本站。
 
 ![SIMPLE SO](https://s1.ax1x.com/2020/06/13/tvdfXD.png)
 
