@@ -1,0 +1,46 @@
+{
+  "list": [
+    "baidu",
+    "google",
+    "bing",
+    "sougou",
+    "360",
+    "scholar"
+  ],
+  "360": [
+    "https://www.so.com/s",
+    "q",
+    "360搜索，SO靠谱",
+    "360"
+  ],
+  "baidu": [
+    "https://www.baidu.com/s",
+    "wd",
+    "百度一下，你就知道",
+    "百度"
+  ],
+  "google": [
+    "https://www.google.com/search",
+    "q",
+    "Google 搜索",
+    "谷歌"
+  ],
+  "bing": [
+    "https://cn.bing.com/search",
+    "q",
+    "微软 Bing",
+    "必应"
+  ],
+  "sougou": [
+    "https://www.sogou.com/web",
+    "query",
+    "上网从搜狗开始",
+    "搜狗"
+  ],
+  "scholar": [
+    "https://scholar.google.com/scholar",
+    "q",
+    "谷歌学术",
+    "学术"
+  ]
+}
