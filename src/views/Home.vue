@@ -7,21 +7,21 @@
         <div id="headline-content">
           <div id="search-tab">
             <span v-for="engine_name in engine_names" v-bind:key="engine_name"
-                  :class="{active: get_search_engine()===engine_name}"
-                  @click="set_search_engine(engine_name)">{{ engines[engine_name][3] }}</span>
+              :class="{ active: get_search_engine() === engine_name }" @click="set_search_engine(engine_name)">{{
+                  engines[engine_name][3]
+              }}</span>
           </div>
-          <form id="search-form" ref="search_form" :action=engines[search_engine][0] target="_blank">
+          <form id="search-form" ref="search_form" :action=engines[search_engine][0] target="">
             <input id="search-keyword" ref="search_input" v-model="keyword" :name=engines[search_engine][1]
-                   :placeholder=engines[search_engine][2]
-                   autocomplete=off autofocus class="float-left" type=search
-                   @blur="blur()" @focus="focus()" @input="get_hot_keyword()" @keydown.down="down()"
-                   @keydown.prevent.up="up()">
+              :placeholder=engines[search_engine][2] autocomplete=off autofocus class="float-left" type=search
+              @blur="blur()" @focus="focus()" @input="get_hot_keyword()" @keydown.down="down()"
+              @keydown.prevent.up="up()" @keydown.prevent.tab="go_next()">
             <input id="search-form-submit" class="float-right" type="submit" value="搜索">
           </form>
           <div id="search-hot" :style="search_hot_display">
             <ul>
-              <li v-for="(key,index) in keywords" v-bind:key="key" :class="{selected:key_selected === index}"
-                  @click="go_submit(key)">
+              <li v-for="(key, index) in keywords" v-bind:key="key" :class="{ selected: key_selected === index }"
+                @click="go_submit(key)">
                 <span :class="'search_index' + index">{{ index + 1 }}</span>{{ key }}
               </li>
             </ul>
@@ -84,24 +84,44 @@ export default {
         this.keywords = []
         return;
       }
-      // https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=golang&cb=xxxxx
-      if (this.keyword !== '' && this.keyword !== '0') {
+      if (this.search_engine === "google") {
+        if (this.keyword === "" || this.keyword === "0") {
+          this.keywords = []
+          return;
+        }
+        let api = `https://www.google.com/complete/search?q=${this.keyword}&client=chrome&gl=cn&hl=zh-CN`
+        clearTimeout(this.timer) // 清除定时器
+        this.timer = setTimeout(() => {
+          fetchJsonp(api, {
+            timeout: 800,
+          })
+            .then(res => res.json())
+            .then(res => {
+              this.keywords = res[1]
+            }).catch(err => {
+              this.keywords = ['No web connection', err.toString()]
+            })
+        }, 50)
+      } else {
+        // https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=golang&cb=xxxxx
+        if (this.keyword === "" || this.keyword === "0") {
+          this.keywords = []
+          return;
+        }
         clearTimeout(this.timer) // 清除定时器
         this.timer = setTimeout(() => {
           let api = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + this.keyword;
           fetchJsonp(api, {
             jsonpCallback: 'cb'
           })
-              .then((response) => {
-                return response.json()
-              }).then((data) => {
-            this.keywords = data.s // 用到this一定要注意this指向
-          }).catch((error) => {
-            console.log(error)
-          })
+            .then((response) => {
+              return response.json()
+            }).then((data) => {
+              this.keywords = data.s // 用到this一定要注意this指向
+            }).catch((error) => {
+              console.log(error)
+            })
         }, 50)
-      } else {
-        this.keywords = []
       }
     },
     go_submit(val) {
@@ -109,19 +129,23 @@ export default {
       this.$refs.search_input.value = val
       this.$refs.search_form.submit()
     },
+    go_next(){
+      let e_index = this.engine_names.indexOf(this.search_engine)
+      this.set_search_engine(this.engine_names[(e_index + 1) % this.engine_names.length])
+    },
     getData(url) {
       fetchJsonp(url, {
         jsonpCallback: 'callback'
       })
-          .then((response) => {
-            console.log(response);
-            console.log(response.json());
-            return response.json();
-          }).then((json) => {
-        this.users = json;	// 在此处进行接收数据之后的操作
-      }).catch((error) => {
-        console.log(error);	// 此处是数据请求失败后的处理
-      })
+        .then((response) => {
+          console.log(response);
+          console.log(response.json());
+          return response.json();
+        }).then((json) => {
+          this.users = json;	// 在此处进行接收数据之后的操作
+        }).catch((error) => {
+          console.log(error);	// 此处是数据请求失败后的处理
+        })
     },
     down() {
       this.key_selected = (this.key_selected + 1) % this.keywords.length
@@ -147,7 +171,7 @@ export default {
     }
   }
 }
-;
+  ;
 </script>
 <style lang="less">
 @import "../style/search";
