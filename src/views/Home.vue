@@ -11,11 +11,11 @@
                   engines[engine_name][3]
               }}</span>
           </div>
-          <form id="search-form" ref="search_form" :action=engines[search_engine][0] target="_blank">
+          <form id="search-form" ref="search_form" :action=engines[search_engine][0] target="">
             <input id="search-keyword" ref="search_input" v-model="keyword" :name=engines[search_engine][1]
               :placeholder=engines[search_engine][2] autocomplete=off autofocus class="float-left" type=search
               @blur="blur()" @focus="focus()" @input="get_hot_keyword()" @keydown.down="down()"
-              @keydown.prevent.up="up()">
+              @keydown.prevent.up="up()" @keydown.prevent.tab="go_next()">
             <input id="search-form-submit" class="float-right" type="submit" value="搜索">
           </form>
           <div id="search-hot" :style="search_hot_display">
@@ -128,6 +128,10 @@ export default {
       this.keyword = val
       this.$refs.search_input.value = val
       this.$refs.search_form.submit()
+    },
+    go_next(){
+      let e_index = this.engine_names.indexOf(this.search_engine)
+      this.set_search_engine(this.engine_names[(e_index + 1) % this.engine_names.length])
     },
     getData(url) {
       fetchJsonp(url, {
