@@ -1,0 +1,266 @@
+@import "common";
+@import "sidebar";
+
+html,
+body, #app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+html {
+  font-family: "-apple-system", "Noto Serif SC", 'Microsoft YaHei', "helvetica", "sans-serif";
+  color: #444444;
+  font-weight: 400;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: -100;
+  /*opacity:0.6; filter: alpha(opacity=70);*/
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in
+}
+
+#foot {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  color: #444444;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+
+  .out_link {
+    position: relative;
+  }
+
+  .out_link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #444444;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .out_link:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+}
+
+
+#top-menu-list {
+  height: 42px;
+  margin: 0 4%;
+  position: absolute;
+  top: 15px;
+  /*background: aquamarine;*/
+}
+
+#top-menu-ul {
+  text-align: center;
+  display: inline-block;
+  height: 42px;
+  margin: auto 0;
+  /*background: #ffefc0;*/
+
+  li {
+    float: left;
+    width: 62px;
+    list-style: none;
+    text-align: center;
+    margin: 0 2px;
+    white-space: nowrap;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+
+    a {
+      vertical-align: middle;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 16px;
+      margin: 5px 0;
+    }
+  }
+}
+
+/*侧边栏模块样式*/
+
+#menu {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.8);
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  z-index: 2001;
+
+  i {
+    position: fixed;
+    right: 10px;
+    margin: 24px auto;
+    width: 30px;
+    height: 2px;
+    background: #444444;
+    transition: 0.3s all ease;
+  }
+
+  i:before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    top: -8px;
+    background: #444444;
+    position: absolute;
+    right: 0;
+    transition: 0.3s all ease;
+  }
+
+  i:after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    bottom: -8px;
+    background: #444444;
+    position: absolute;
+    left: 0;
+    transition: 0.3s all ease;
+  }
+}
+
+#menu.on {
+  i {
+    width: 25px;
+    background: #444444;
+  }
+
+  i:before {
+    top: -5px;
+    transform: rotate(45deg);
+    width: 14px;
+    right: -1px;
+    left: auto;
+    background: #444444;
+  }
+
+  i:after {
+    bottom: -5px;
+    transform: rotate(-45deg);
+    width: 14px;
+    right: -1px;
+    left: auto;
+    background: #444444;
+  }
+}
+
+
+.list {
+  width: 376px;
+  padding: 0 20px 0 0;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  z-index: 2000;
+  background: #f7f7f7;
+  transition: 0.3s all ease;
+
+  ul {
+    float: left;
+
+    li {
+      text-align: center;
+      margin: 0 auto;
+      float: left;
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in
+    }
+  }
+
+  #setting {
+    width: 46px;
+    //height: 100%;
+    padding: 20px 0 20px 0;
+    //border-right: 1px solid #e9e9e9;
+
+    li {
+      width: 46px;
+      margin: 6px 0;
+      border-right: 2px solid #f7f7f7;
+
+      a {
+        padding: 4px 6px;
+        line-height: 24px;
+        margin: 0 5px 0 5px;
+      }
+    }
+
+    li.selected {
+      border-right: 2px solid #838383;
+    }
+  }
+
+  #element {
+    width: 294px;
+    //height: 100%;
+    padding: 20px 0 0 5px;
+    border-left: 1px solid #e9e9e9;
+
+    li {
+      width: 96px;
+      padding: 9px 0;
+      white-space: nowrap;
+
+      a {
+        vertical-align: middle;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 16px;
+      }
+    }
+
+    li.element-title {
+      width: 100%;
+      padding: 9px 0;
+      text-align: left;
+
+      span {
+        line-height: 24px;
+        margin: 0;
+        padding: 0 0 5px 0;
+        border-bottom: 2px solid #838383;
+        cursor: text;
+        color: #999999;
+        font-size: 14px;
+      }
+    }
+
+    div {
+      padding: 9px 0;
+      line-height: 32px;
+      float: left;
+      color: #666666;
+    }
+  }
+}
+
+.list.closed {
+  right: -376px;
+}
+
+
+/*侧边栏模块样式结束*/

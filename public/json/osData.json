@@ -1,0 +1,38 @@
+[
+  {
+    "info": "win10",
+    "msg": "本页提供均为原版镜像，未做任何修改，请自行验证SHA或MD5。",
+    "data": [
+      {
+        "title": "2004 [20H1] 2020.06",
+        "name": "Windows 10 (consumer edition), Version 2004 (Updated June 2020) (x64) - DVD (Chinese-Simplified)",
+        "url": "ed2k://|file|cn",
+        "sha": "SHA1：AE77E94D5709171252992CD31644A1A73032074C"
+      },
+      {
+        "title": "LTSC 2019.03",
+        "name": "Windows 10 Enterprise LTSC 2019 (x64) - DVD (Chinese-Simplified)",
+        "url": "ed2k://|file|cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso|4478906368|E7C526499308841A4A6D116C857DB669|/",
+        "sha": "SHA1：24B59706D5EDED392423936C82BA5A83596B50CC"
+      }
+    ]
+  },
+  {
+    "info": "win7",
+    "msg": "本页提供均为原版镜像，未做任何修改，请自行验证SHA或MD5。",
+    "data": [
+      {
+        "title": "Win7旗舰版 2011.05",
+        "name": "Windows 7 Ultimate with Service Pack 1 (x64) - DVD (Chinese-Simplified)",
+        "url": "ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B58548681854236C7939003B583A8078|/",
+        "sha": "SHA1：2CE0B2DB34D76ED3F697CE148CB7594432405E23"
+      },
+      {
+        "title": "Win7专业版 2009.11",
+        "name": "Windows 7 Ultimate with Service Pack 1 (x64) - DVD (Chinese-Simplified)",
+        "url": "ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B58548681854236C7939003B583A8078|/",
+        "sha": "SHA1：2CE0B2DB34D76ED3F697CE148CB7594432405E23"
+      }
+    ]
+  }
+]

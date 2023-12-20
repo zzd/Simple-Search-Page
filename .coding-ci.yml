@@ -1,0 +1,5 @@
+$:
+  api_trigger_vscode:
+    clouddev:
+      runner:
+        cpus: 1
