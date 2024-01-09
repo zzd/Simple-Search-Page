@@ -65,6 +65,16 @@
         "text": "哔哩哔哩"
       },
       {
+        "url": "https://www.douyin.com/",
+        "icon": "icon-douyin",
+        "text": "抖音"
+      },
+      {
+        "url": "https://www.ixigua.com/",
+        "icon": "icon-xigua",
+        "text": "西瓜视频"
+      },
+      {
         "url": "https://www.youku.com/",
         "icon": "icon-youku",
         "text": "优酷"
@@ -88,16 +98,6 @@
         "url": "https://www.douyu.com/",
         "icon": "icon-douyuTV",
         "text": "斗鱼直播"
-      },
-      {
-        "url": "https://egame.qq.com/",
-        "icon": "icon-fangqiedianjing",
-        "text": "企鹅电竞"
-      },
-      {
-        "url": "http://www.zmz2019.com/",
-        "icon": "icon-zimu",
-        "text": "人人影视"
       }
     ]
   },
