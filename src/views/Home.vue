@@ -85,11 +85,11 @@ export default {
         this.keywords = []
         return;
       }
-      // https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=golang&cb=xxxxx
+      // https://www.baidu.com/su?wd=golang&cb=xxxxx
       if (this.keyword !== '' && this.keyword !== '0') {
         clearTimeout(this.timer) // 清除定时器
         this.timer = setTimeout(() => {
-          let api = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + this.keyword;
+          let api = 'https://www.baidu.com/su?wd=' + this.keyword;
           fetchJsonp(api, {
             jsonpCallback: 'cb'
           })
