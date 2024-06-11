@@ -1,6 +1,6 @@
 <template>
   <!-- <div id="logo"><a href="https://hao.zdsr.cn"><img alt="简洁导航" src="../assets/img/simple-so.svg"> </a></div> -->
-  <div id="logo"><a href="/"><img alt="简洁导航" src="./img/simple-so.svg"> </a></div>
+  <div id="logo"><a href="/"><img alt="简洁导航" src="../assets/img/simple-so.svg"> </a></div>
 
   <div v-if="engines" id="site-main">
     <div id="search-bar">
