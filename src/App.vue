@@ -36,7 +36,7 @@
     <RouterView />
     <!-- <Background @background="set_background"></Background> -->
     <div id="message"></div>
-    <div id="foot">©2018-2024
+    <div id="foot">©2018-2025
       <a class="out_link" href="https://www.zhangdi.net/" target="_blank">ZHANGDI</a> 版权所有
       <a class="out_link beian" href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备18024871号</a>
       <a>&nbsp;</a>
