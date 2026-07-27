@@ -7,7 +7,7 @@
     </ul>
     <ul id="element">
       <span v-if="menu_selected === 'bookmark'">
-        <Bookmarks></Bookmarks>
+        <Bookmarks :bookmarks="bookmarks"></Bookmarks>
       </span>
       <span v-else-if="menu_selected === 'setting'">
         <Setting></Setting>
@@ -43,7 +43,6 @@ export default {
   components: { Setting, Bookmarks },
   provide() {
     return {
-      bookmarks: this.bookmarks,
       reloadBookmarks: this.reloadBookmarks,
       resetBookmarks: this.resetBookmarks
     }
