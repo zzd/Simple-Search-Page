@@ -13,7 +13,7 @@
   <!--  <li><a>云端保存</a></li>-->
   <li class="element-title"><span>关于本项目</span></li>
   <div>
-    <p style="color: red">无云端功能，本次构建版本为v3.0.1。</p>
+    <p style="color: red">无云端功能，本次构建版本为v{{ version }}。</p>
     <h4>作者：</h4>
     <p>ZhangDi，https://git.io/zd，<br>群 1065753778</p>
     <h4>项目介绍：</h4>
@@ -28,11 +28,13 @@
 
 <script>
 import storage from "@/utils/storage";
+import packageJson from "../../package.json";
 
 export default {
   name: "Setting",
   data() {
     return {
+      version: packageJson.version,
       data: "",
       setting: ""
     };
@@ -55,11 +57,10 @@ export default {
       reader.onload = function () {
         try {
           storage.set("bookmarks", JSON.parse(this.result))
-        } catch (error) {
-          console.log("解析失败，你的文件可能有问题。")
+          alert("书签已上传成功")
+        } catch {
+          alert("解析失败，你的文件可能有问题。")
         }
-
-
       }
     },
     recover_json() {

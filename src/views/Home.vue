@@ -21,7 +21,7 @@
           </form>
           <div id="search-hot" :style="search_hot_display">
             <ul>
-              <li v-for="(key,index) in keywords" v-bind:key="key" :class="{selected:key_selected === index}"
+              <li v-for="(key,index) in keywords" v-bind:key="key + index" :class="{selected:key_selected === index}"
                   @click="go_submit(key)">
                 <span :class="'search_index' + index">{{ index + 1 }}</span>{{ key }}
               </li>
@@ -97,8 +97,8 @@ export default {
                 return response.json()
               }).then((data) => {
             this.keywords = data.s // 用到this一定要注意this指向
-          }).catch((error) => {
-            console.log(error)
+          }).catch(() => {
+            this.keywords = []
           })
         }, 50)
       } else {
@@ -114,15 +114,12 @@ export default {
       fetchJsonp(url, {
         jsonpCallback: 'callback'
       })
-          .then((response) => {
-            console.log(response);
-            console.log(response.json());
-            return response.json();
-          }).then((json) => {
-        this.users = json;	// 在此处进行接收数据之后的操作
-      }).catch((error) => {
-        console.log(error);	// 此处是数据请求失败后的处理
-      })
+          .then((response) => response.json())
+          .then((json) => {
+            this.users = json;
+          }).catch(() => {
+            this.users = null;
+          })
     },
     down() {
       this.key_selected = (this.key_selected + 1) % this.keywords.length

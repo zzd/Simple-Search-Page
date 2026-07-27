@@ -1,8 +1,8 @@
 <template>
   <span v-if="bookmarks">
-      <span v-for="bookmark in bookmarks" v-bind:key="bookmark">
+      <span v-for="bookmark in bookmarks" v-bind:key="bookmark.title">
         <li class="element-title"><span>{{ bookmark.title }}</span></li>
-        <li v-for="elem in bookmark.node" v-bind:key="elem"><a :href="elem.url" rel="nofollow"
+        <li v-for="elem in bookmark.node" v-bind:key="elem.url"><a :href="elem.url" rel="nofollow"
                                                                target="_blank">{{ elem.text }}</a></li>
       </span>
   </span>

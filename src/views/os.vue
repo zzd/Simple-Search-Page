@@ -8,7 +8,7 @@
       </ul>
     </div>
     <div id="right-main">
-      <div v-for="e in data[list[menu_selected]].data" v-bind:key="e">
+      <div v-for="(e, index) in data[list[menu_selected]].data" v-bind:key="e.url || index">
         <span>{{ e.title }}</span>
         <br>{{ e.name }}
         <br>{{ e.url }}

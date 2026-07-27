@@ -13,31 +13,41 @@
 
 # simple-search-page-vue
 
-3.0.0新版来了，基于Vue实现。  
+3.0.2 新版，基于 Vue 3 + Vite 实现的极简搜索导航主页，无广告、无干扰。
 
-This template should help get you started developing with Vue 3 in Vite.
+## 功能
 
-## Recommended IDE Setup
+- 多引擎搜索（百度、谷歌、必应、搜狗、360、谷歌学术）
+- 百度搜索热词提示
+- 侧边栏书签导航
+- 书签 JSON 备份/恢复
+- 天气挂件
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 技术栈
 
-## Customize configuration
+- Vue 3
+- Vue Router 4
+- Vite 5
+- Less
+- Axios / fetch-jsonp
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## 环境变量
 
-## Project Setup
+复制 `.env` 文件并根据需要修改：
+
+```
+BASE_URL="/"
+VITE_WEATHER_TOKEN="your_seniverse_weather_token"
+```
+
+## 项目启动
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 生产构建
 
 ```sh
 npm run build
