@@ -32,11 +32,11 @@
 </template>
 
 <script>
-import storage from "@/utils/storage";
-import axios from "axios";
-import Bookmarks from "./components/Bookmarks.vue";
-import Setting from "./components/Setting.vue";
-import { RouterView } from 'vue-router'
+import storage from "@/utils/storage"
+import axios from "axios"
+import Bookmarks from "./components/Bookmarks.vue"
+import Setting from "./components/Setting.vue"
+import { RouterView } from "vue-router"
 
 export default {
   name: "Home",
@@ -52,7 +52,6 @@ export default {
     return {
       is_on: false,
       menu_selected: "bookmark",
-      background: "",
       bookmarks: []
     }
   },
@@ -65,9 +64,6 @@ export default {
     },
     menu_select(val) {
       this.menu_selected = val
-    },
-    set_background(data) {
-      this.background = data;
     },
     reloadBookmarks() {
       this.bookmarks = storage.get("bookmarks") || []
@@ -84,40 +80,57 @@ export default {
         axios.get("./json/url.json").then(res => {
           storage.set("bookmarks", res.data)
           this.bookmarks = res.data
+        }).catch(error => {
+          console.error("加载书签数据失败:", error)
         })
-      }
-    }
-  },
-  watch: {
-    background() {
-      try {
-        this.$refs.content.style.background = this.background
-      } catch (error) {
-        console.log(error);
       }
     }
   },
   created() {
     this.loadBookmarks()
-  },
-  mounted() {
-    this.$refs.content.style.background = this.background
   }
 };
-(function (a, h, g, f, e, d, c, b) { b = function () { d = h.createElement(g); c = h.getElementsByTagName(g)[0]; d.src = e; d.charset = "utf-8"; d.async = 1; c.parentNode.insertBefore(d, c) }; a["SeniverseWeatherWidgetObject"] = f; a[f] || (a[f] = function () { (a[f].q = a[f].q || []).push(arguments) }); a[f].l = +new Date(); if (a.attachEvent) { a.attachEvent("onload", b) } else { a.addEventListener("load", b, false) } }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
-window.SeniverseWeatherWidget('show', {
-  flavor: "slim",
-  location: "WM6N2PM3WY2K",
-  geolocation: true,
-  language: "auto",
-  unit: "c",
-  theme: "light",
-  token: import.meta.env.VITE_SENIVERSE_TOKEN,
-  hover: "enabled",
-  container: "tp-weather-widget"
-})
+(function (window, document, scriptName, widgetName, scriptUrl) {
+  const loadScript = function () {
+    const script = document.createElement(scriptName)
+    const firstScript = document.getElementsByTagName(scriptName)[0]
+    script.src = scriptUrl
+    script.charset = "utf-8"
+    script.async = 1
+    script.onerror = function () {
+      console.error("天气组件脚本加载失败:", scriptUrl)
+    }
+    firstScript.parentNode.insertBefore(script, firstScript)
+  }
+  window["SeniverseWeatherWidgetObject"] = widgetName
+  window[widgetName] = window[widgetName] || function () {
+    (window[widgetName].q = window[widgetName].q || []).push(arguments)
+  }
+  window[widgetName].l = Date.now()
+  if (window.attachEvent) {
+    window.attachEvent("onload", loadScript)
+  } else {
+    window.addEventListener("load", loadScript, false)
+  }
+})(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + Math.floor(Date.now() / 100000000))
+
+try {
+  window.SeniverseWeatherWidget("show", {
+    flavor: "slim",
+    location: "WM6N2PM3WY2K",
+    geolocation: true,
+    language: "auto",
+    unit: "c",
+    theme: "light",
+    token: import.meta.env.VITE_SENIVERSE_TOKEN,
+    hover: "enabled",
+    container: "tp-weather-widget"
+  })
+} catch (error) {
+  console.error("天气组件初始化失败:", error)
+}
 </script>
 
-<style lang='less'>
+<style lang="less">
 @import "style/main";
 </style>
