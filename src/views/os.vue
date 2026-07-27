@@ -2,7 +2,7 @@
   <div v-if="data" id="frame-box">
     <div id="left-menu">
       <ul id="left-menu-ul">
-        <li v-for="e in data" :key="e.info" :class="{selected:menu_selected===e.info}"
+        <li v-for="e in data" :key="e.info" :class="{selected: menu_selected === e.info}"
             @click="menu_select(e.info)">
           <a>{{ e.info }}</a></li>
       </ul>
@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import storage from "@/utils/storage";
-import axios from "axios";
+import storage from "@/utils/storage"
+import axios from "axios"
 
 export default {
   name: "os",
@@ -30,7 +30,7 @@ export default {
     return {
       list: {},
       menu_selected: "",
-      data: null,
+      data: null
     }
   },
   computed: {
@@ -45,7 +45,7 @@ export default {
   methods: {
     menu_select(val) {
       this.menu_selected = val
-    },
+    }
   },
   created() {
     axios.get("./json/osData.json").then(res => {

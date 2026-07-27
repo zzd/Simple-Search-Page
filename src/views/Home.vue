@@ -6,21 +6,21 @@
       <div id="container">
         <div id="headline-content">
           <div id="search-tab">
-            <span v-for="engine_name in engine_names" v-bind:key="engine_name"
-                  :class="{active: get_search_engine()===engine_name}"
+            <span v-for="engine_name in engine_names" :key="engine_name"
+                  :class="{active: get_search_engine() === engine_name}"
                   @click="set_search_engine(engine_name)">{{ engines[engine_name][3] }}</span>
           </div>
-          <form id="search-form" ref="search_form" :action=engines[search_engine][0] rel="noopener noreferrer" target="_blank">
-            <input id="search-keyword" v-model="keyword" :name=engines[search_engine][1]
-                   :placeholder=engines[search_engine][2]
-                   autocomplete=off autofocus class="float-left" type=search
+          <form id="search-form" ref="search_form" :action="engines[search_engine][0]" rel="noopener noreferrer" target="_blank">
+            <input id="search-keyword" v-model="keyword" :name="engines[search_engine][1]"
+                   :placeholder="engines[search_engine][2]"
+                   autocomplete="off" autofocus class="float-left" type="search"
                    @blur="blur()" @focus="focus()" @input="get_hot_keyword()" @keydown.down="down()"
                    @keydown.prevent.up="up()">
             <input id="search-form-submit" class="float-right" type="submit" value="搜索">
           </form>
           <div id="search-hot" :style="search_hot_display">
             <ul>
-              <li v-for="(key,index) in keywords" v-bind:key="key" :class="{selected:key_selected === index}"
+              <li v-for="(key, index) in keywords" :key="key" :class="{selected: key_selected === index}"
                   @click="go_submit(key)">
                 <span :class="'search_index' + index">{{ index + 1 }}</span>{{ key }}
               </li>
@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import axios from "axios";
-import storage from "@/utils/storage";
-import fetchJsonp from 'fetch-jsonp';
+import axios from "axios"
+import storage from "@/utils/storage"
+import fetchJsonp from "fetch-jsonp"
 
 export default {
   name: "Home",
@@ -47,7 +47,7 @@ export default {
       keyword: "",
       keywords: [],
       key_selected: -1,
-      search_hot_display: "display: none",
+      search_hot_display: "display: none"
     }
   },
   created() {
@@ -78,23 +78,23 @@ export default {
     get_hot_keyword() {
       if (this.keyword === "") {
         this.keywords = []
-        return;
+        return
       }
-      // https://www.baidu.com/su?wd=golang&cb=xxxxx
-      if (this.keyword !== '' && this.keyword !== '0') {
-        clearTimeout(this.timer) // 清除定时器
+      if (this.keyword !== "0") {
+        clearTimeout(this.timer)
         this.timer = setTimeout(() => {
-          let api = 'https://www.baidu.com/su?wd=' + this.keyword;
+          const api = "https://www.baidu.com/su?wd=" + this.keyword
           fetchJsonp(api, {
-            jsonpCallback: 'cb'
+            jsonpCallback: "cb"
           })
-              .then((response) => {
-                return response.json()
-              }).then((data) => {
-            this.keywords = data.s // 用到this一定要注意this指向
-          }).catch((error) => {
-            console.log(error)
-          })
+            .then(response => response.json())
+            .then(data => {
+              this.keywords = data.s || []
+            })
+            .catch(error => {
+              console.error("获取搜索热词失败:", error)
+              this.keywords = []
+            })
         }, 50)
       } else {
         this.keywords = []
@@ -113,8 +113,8 @@ export default {
       this.keyword = this.keywords[this.key_selected]
     },
     blur() {
-      clearTimeout(this.timer);  //清除延迟执行
-      this.timer = setTimeout(() => {   //设置延迟执行
+      clearTimeout(this.timer)
+      this.timer = setTimeout(() => {
         this.search_hot_display = "display: none"
         this.key_selected = -1
       }, 100)
@@ -126,7 +126,6 @@ export default {
     }
   }
 }
-;
 </script>
 <style lang="less">
 @import "../style/search";
