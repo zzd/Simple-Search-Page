@@ -6,22 +6,27 @@ on:
   pull_request:
     branches: [ master ]
 
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [20]
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
     - name: Install and Build
       run: |
-        npm install
+        npm ci
         npm run build
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.8
+      if: github.event_name == 'push'
+      uses: JamesIves/github-pages-deploy-action@v4
       with: 
         branch: gh-pages
         folder: dist

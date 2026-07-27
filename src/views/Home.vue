@@ -1,5 +1,4 @@
 <template>
-  <!-- <div id="logo"><a href="https://hao.zdsr.cn"><img alt="简洁导航" src="../assets/img/simple-so.svg"> </a></div> -->
   <div id="logo"><a href="/"><img alt="简洁导航" src="../assets/img/simple-so.svg"> </a></div>
 
   <div v-if="engines" id="site-main">
@@ -11,8 +10,8 @@
                   :class="{active: get_search_engine()===engine_name}"
                   @click="set_search_engine(engine_name)">{{ engines[engine_name][3] }}</span>
           </div>
-          <form id="search-form" ref="search_form" :action=engines[search_engine][0] target="_blank">
-            <input id="search-keyword" ref="search_input" v-model="keyword" :name=engines[search_engine][1]
+          <form id="search-form" ref="search_form" :action=engines[search_engine][0] rel="noopener noreferrer" target="_blank">
+            <input id="search-keyword" v-model="keyword" :name=engines[search_engine][1]
                    :placeholder=engines[search_engine][2]
                    autocomplete=off autofocus class="float-left" type=search
                    @blur="blur()" @focus="focus()" @input="get_hot_keyword()" @keydown.down="down()"
@@ -52,23 +51,19 @@ export default {
     }
   },
   created() {
-    // 将引擎列表设置为本地存储
-    if (storage.get("engines")) {
-      this.engines = storage.get("engines")
-      this.engine_names = storage.get("engines")["list"]
-      if (storage.get("search_engine")) {
-        this.set_search_engine(storage.get("search_engine"))
-      } else {
-        this.set_search_engine(this.engine_names[0])
-      }
+    const cachedEngines = storage.get("engines")
+    if (cachedEngines) {
+      this.engines = cachedEngines
+      this.engine_names = cachedEngines["list"]
+      this.set_search_engine(storage.get("search_engine") || this.engine_names[0])
     } else {
-      let engines;
-      engines = () => axios.get("./json/search_engine.json")
-      engines().then(res => {
+      axios.get("./json/search_engine.json").then(res => {
         storage.set("engines", res.data)
         this.engines = res.data
-        this.engine_names = storage.get("engines")["list"]
+        this.engine_names = res.data["list"]
         this.set_search_engine(this.engine_names[0])
+      }).catch(error => {
+        console.error("加载搜索引擎配置失败:", error)
       })
     }
   },
@@ -107,32 +102,15 @@ export default {
     },
     go_submit(val) {
       this.keyword = val
-      this.$refs.search_input.value = val
       this.$refs.search_form.submit()
-    },
-    getData(url) {
-      fetchJsonp(url, {
-        jsonpCallback: 'callback'
-      })
-          .then((response) => {
-            console.log(response);
-            console.log(response.json());
-            return response.json();
-          }).then((json) => {
-        this.users = json;	// 在此处进行接收数据之后的操作
-      }).catch((error) => {
-        console.log(error);	// 此处是数据请求失败后的处理
-      })
     },
     down() {
       this.key_selected = (this.key_selected + 1) % this.keywords.length
       this.keyword = this.keywords[this.key_selected]
-      this.$refs.search_input.value = this.keywords[this.key_selected]
     },
     up() {
       this.key_selected = (this.key_selected - 1 + this.keywords.length) % this.keywords.length
       this.keyword = this.keywords[this.key_selected]
-      this.$refs.search_input.value = this.keywords[this.key_selected]
     },
     blur() {
       clearTimeout(this.timer);  //清除延迟执行

@@ -1,8 +1,8 @@
 <template>
-  <span v-if="bookmarks">
-      <span v-for="bookmark in bookmarks" v-bind:key="bookmark">
+  <span v-if="bookmarks && bookmarks.length">
+      <span v-for="bookmark in bookmarks" v-bind:key="bookmark.title">
         <li class="element-title"><span>{{ bookmark.title }}</span></li>
-        <li v-for="elem in bookmark.node" v-bind:key="elem"><a :href="elem.url" rel="nofollow"
+        <li v-for="elem in bookmark.node" v-bind:key="elem.text"><a :href="elem.url" rel="noopener noreferrer nofollow"
                                                                target="_blank">{{ elem.text }}</a></li>
       </span>
   </span>
@@ -10,32 +10,9 @@
 </template>
 
 <script>
-import storage from "@/utils/storage";
-import axios from "axios";
-
 export default {
   name: "Bookmarks",
-  // props: ["bookmarks"],
-  data() {
-    return {
-      data: "",
-      bookmarks: ""
-    };
-  },
-  created() {
-    let bookmarks;
-    bookmarks = storage.get("bookmarks")
-    if (bookmarks) {
-      this.bookmarks = bookmarks
-    } else {
-      let bookmarkData;
-      bookmarkData = () => axios.get("./json/url.json")
-      bookmarkData().then(res => {
-        storage.set("bookmarks", res.data)
-        this.bookmarks = res.data
-      })
-    }
-  },
+  inject: ["bookmarks"]
 }
 </script>
 
