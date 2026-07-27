@@ -21,7 +21,7 @@
     <h4>项目地址：</h4>
     <p>https://github.com/zzd/Simple-Search-Page</p>
     <h4>BUG反馈：</h4>
-    <a href="https://github.com/zzd/Simple-Search-Page/issues/new/choose">Github issues</a>
+    <a href="https://github.com/zzd/Simple-Search-Page/issues/new/choose" rel="noopener noreferrer" target="_blank">Github issues</a>
     <h4>版权声明：</h4>
     <p>本项目开源。</p></div>
 </template>
@@ -31,6 +31,7 @@ import storage from "@/utils/storage";
 
 export default {
   name: "Setting",
+  inject: ["reloadBookmarks", "resetBookmarks"],
   data() {
     return {
       data: "",
@@ -52,18 +53,17 @@ export default {
       const selectedFile = this.$refs.refFile.files[0];
       let reader = new FileReader();
       reader.readAsText(selectedFile);
-      reader.onload = function () {
+      reader.onload = () => {
         try {
-          storage.set("bookmarks", JSON.parse(this.result))
+          storage.set("bookmarks", JSON.parse(reader.result))
+          this.reloadBookmarks()
         } catch (error) {
           console.log("解析失败，你的文件可能有问题。")
         }
-
-
       }
     },
     recover_json() {
-      storage.set("bookmarks", "")
+      this.resetBookmarks()
     }
   },
 }

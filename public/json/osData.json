@@ -1,0 +1,42 @@
+[
+  {
+    "info": "Windows",
+    "data": [
+      {
+        "title": "Windows 11",
+        "name": "Windows 11 官方下载",
+        "url": "https://www.microsoft.com/software-download/windows11"
+      },
+      {
+        "title": "Windows 10",
+        "name": "Windows 10 官方下载",
+        "url": "https://www.microsoft.com/software-download/windows10"
+      }
+    ]
+  },
+  {
+    "info": "Linux",
+    "data": [
+      {
+        "title": "Ubuntu",
+        "name": "Ubuntu 桌面版",
+        "url": "https://ubuntu.com/download/desktop"
+      },
+      {
+        "title": "Debian",
+        "name": "Debian 官方下载",
+        "url": "https://www.debian.org/distrib/"
+      }
+    ]
+  },
+  {
+    "info": "macOS",
+    "data": [
+      {
+        "title": "macOS",
+        "name": "Apple 官方支持",
+        "url": "https://support.apple.com/zh-cn/HT211683"
+      }
+    ]
+  }
+]

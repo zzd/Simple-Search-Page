@@ -2,16 +2,16 @@
   <div v-if="data" id="frame-box">
     <div id="left-menu">
       <ul id="left-menu-ul">
-        <li v-for="e in data" v-bind:key="e.info" :class="{selected:menu_selected===e.info}"
+        <li v-for="e in data" :key="e.info" :class="{selected:menu_selected===e.info}"
             @click="menu_select(e.info)">
           <a>{{ e.info }}</a></li>
       </ul>
     </div>
     <div id="right-main">
-      <div v-for="e in data[list[menu_selected]].data" v-bind:key="e">
+      <div v-for="e in currentData" :key="e.url">
         <span>{{ e.title }}</span>
-        <br>{{ e.name }}
-        <br>{{ e.url }}
+        <br><a :href="e.url" rel="noopener noreferrer" target="_blank">{{ e.name }}</a>
+        <br><a :href="e.url" rel="noopener noreferrer" target="_blank">{{ e.url }}</a>
       </div>
     </div>
   </div>
@@ -30,7 +30,16 @@ export default {
     return {
       list: {},
       menu_selected: "",
-      data: "",
+      data: null,
+    }
+  },
+  computed: {
+    currentData() {
+      const index = this.list[this.menu_selected]
+      if (index === undefined || !this.data[index]) {
+        return []
+      }
+      return this.data[index].data || []
     }
   },
   methods: {
@@ -39,16 +48,17 @@ export default {
     },
   },
   created() {
-    let osdata;
-    osdata = () => axios.get("./json/osData.json")
-    osdata().then(res => {
-      let i;
-      for (i in res.data) {
-        this.list[res.data[i].info] = i
-      }
-      storage.set("data", res.data)
+    axios.get("./json/osData.json").then(res => {
+      const list = {}
+      res.data.forEach((item, index) => {
+        list[item.info] = index
+      })
+      this.list = list
+      storage.set("osData", res.data)
       this.data = res.data
-      this.menu_selected = this.data[0].info
+      this.menu_selected = res.data[0]?.info || ""
+    }).catch(error => {
+      console.error("加载 OS 数据失败:", error)
     })
   },
 }
