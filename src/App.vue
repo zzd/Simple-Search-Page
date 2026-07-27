@@ -20,7 +20,7 @@
     </div>
     <RouterView />
     <div id="message"></div>
-    <div id="foot">©2018-2025
+    <div id="foot">©2018-2026
       <a class="out_link" href="https://www.zhangdi.net/" rel="noopener noreferrer" target="_blank">ZHANGDI</a> 版权所有
       <a>&nbsp;</a>
       <a class="out_link beian" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank">蜀ICP备18024871号</a>
